@@ -1,14 +1,96 @@
-# astrbot-plugin-helloworld
+# Blue Archive Helper
 
-AstrBot 插件模板 / A template plugin for AstrBot plugin feature
+适用于 AstrBot 的蔚蓝档案活动助手插件，提供：
 
-> [!NOTE]
-> This repo is just a template of [AstrBot](https://github.com/AstrBotDevs/AstrBot) Plugin.
-> 
-> [AstrBot](https://github.com/AstrBotDevs/AstrBot) is an agentic assistant for both personal and group conversations. It can be deployed across dozens of mainstream instant messaging platforms, including QQ, Telegram, Feishu, DingTalk, Slack, LINE, Discord, Matrix, etc. In addition, it provides a reliable and extensible conversational AI infrastructure for individuals, developers, and teams. Whether you need a personal AI companion, an intelligent customer support agent, an automation assistant, or an enterprise knowledge base, AstrBot enables you to quickly build AI applications directly within your existing messaging workflows.
+- 活动查询（进行中、即将开始分开查询）
+- 活动结束前主动提醒（可按群开启/关闭）
 
-# Supports
+## 功能说明
 
-- [AstrBot Repo](https://github.com/AstrBotDevs/AstrBot)
-- [AstrBot Plugin Development Docs (Chinese)](https://docs.astrbot.app/dev/star/plugin-new.html)
-- [AstrBot Plugin Development Docs (English)](https://docs.astrbot.app/en/dev/star/plugin-new.html)
+### 1) 活动查询
+
+- `/ba进行中`：查询当前进行中的活动
+- `/ba即将开始`：查询“即将开始”窗口内的活动
+- `/ba活动`：显示查询入口提示
+
+### 2) 活动结束提醒
+
+- `/ba提醒开启 [分钟]`：开启本群提醒，支持自定义提前分钟数
+- `/ba提醒关闭`：关闭本群提醒
+- `/ba提醒状态`：查看本群提醒状态与当前生效配置
+
+提醒规则：
+
+- 轮询周期内，命中提醒窗口的活动会合并为一条消息发送
+- 同一活动会做去重，避免在后续轮询重复刷屏
+- 每个群独立订阅，不互相影响
+
+## 配置说明
+
+插件支持 WebUI 配置，配置文件为 `_conf_schema.json`。
+
+| 配置项 | 类型 | 默认值 | 说明 |
+|---|---|---:|---|
+| `api_timeout_seconds` | float | `10.0` | 活动接口请求超时时间（秒） |
+| `upcoming_window_hours` | int | `24` | “即将开始”活动查询窗口（小时） |
+| `reminder_poll_minutes` | int | `30` | 结束提醒轮询周期（分钟） |
+| `default_remind_minutes` | int | `30` | `/ba提醒开启` 不带参数时的默认提前分钟 |
+| `max_remind_minutes` | int | `1440` | 允许设置的最大提前提醒分钟数 |
+
+## 使用示例
+
+### 查询进行中活动
+
+```text
+/ba进行中
+```
+
+示例返回：
+
+```text
+BA进行中活动（2026-04-01 21:30:02）
+
+进行中活动（2）
+- 复刻总力战·KAITEN FX Mk.0 | 结束: 2026-04-03 03:59:59
+- 特别委托掉落UP | 结束: 2026-04-02 03:59:59
+```
+
+### 查询即将开始活动
+
+```text
+/ba即将开始
+```
+
+示例返回：
+
+```text
+BA即将开始活动（2026-04-01 21:31:10）
+
+即将开始（24小时内）（1）
+- 联合作战·室外演习 | 开始: 2026-04-02 11:00:00
+```
+
+### 开启提醒
+
+```text
+/ba提醒开启 30
+```
+
+示例提醒消息：
+
+```text
+BA活动结束提醒（30分钟内）
+- 特别委托掉落UP | 结束时间: 2026-04-02 03:59:59
+- 复刻总力战·KAITEN FX Mk.0 | 结束时间: 2026-04-02 03:59:59
+```
+
+## 注意事项
+
+- 本插件依赖外部活动接口，接口异常时会提示“活动数据获取失败，请稍后重试”。
+- 主动提醒依赖平台支持主动消息能力。
+- 提醒轮询不是秒级触发，建议根据群需求设置合理的 `reminder_poll_minutes`。
+
+## 项目信息
+
+- AstrBot: https://github.com/AstrBotDevs/AstrBot
+- 插件开发文档（中文）: https://docs.astrbot.app/dev/star/plugin-new.html
