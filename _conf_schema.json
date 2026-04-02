@@ -1,56 +1,82 @@
 {
-  "api_timeout_seconds": {
-    "description": "活动接口请求超时时间（秒）",
-    "type": "float",
-    "default": 10.0,
-    "hint": "网络较慢可适当提高，例如 15"
-  },
-  "upcoming_window_hours": {
-    "description": "“即将开始”活动查询窗口（小时）",
-    "type": "int",
-    "default": 24,
-    "hint": "例如设置为 24 表示查询未来 24 小时内将开始的活动"
-  },
-  "reminder_poll_minutes": {
-    "description": "结束提醒轮询周期（分钟）",
-    "type": "int",
-    "default": 30,
-    "hint": "建议 10~60，默认 30"
-  },
-  "default_remind_minutes": {
-    "description": "默认提前提醒时间（分钟）",
-    "type": "int",
-    "default": 30,
-    "hint": "用户执行 /ba提醒开启 不带参数时使用该值"
-  },
-  "max_remind_minutes": {
-    "description": "允许设置的最大提前提醒时间（分钟）",
-    "type": "int",
-    "default": 1440,
-    "hint": "用于限制 /ba提醒开启 的最大参数，1440 表示 24 小时"
-  },
-  "enable_persona_polish": {
-    "description": "是否启用基于当前人格的回复润色",
-    "type": "bool",
-    "default": false,
-    "hint": "开启后，插件回复会先用当前会话人格进行润色再发送"
-  },
-  "persona_polish_model": {
-    "description": "润色时使用的模型名称（可选）",
-    "type": "string",
-    "default": "",
-    "hint": "留空使用当前会话模型；可填写模型名强制指定润色模型"
-  },
-  "whitelist_sessions": {
-    "description": "会话白名单（SID 列表）",
-    "type": "list",
-    "default": [],
-    "hint": "留空表示不启用白名单；填写后仅白名单内会话可触发。本插件建议填写 unified_msg_origin，例如 aiocqhttp:group:123456789"
-  },
-  "blacklist_sessions": {
-    "description": "会话黑名单（SID 列表）",
-    "type": "list",
-    "default": [],
-    "hint": "留空表示不启用黑名单；填写后黑名单内会话不可触发。若白名单与黑名单同时命中，则按不可触发处理"
-  }
+    "api_timeout_seconds": {
+        "description": "活动接口请求超时时间（秒）",
+        "type": "float",
+        "default": 10.0,
+        "hint": "网络较慢可适当提高，例如 15"
+    },
+    "upcoming_window_hours": {
+        "description": "“即将开始”活动查询窗口（小时）",
+        "type": "int",
+        "default": 24,
+        "hint": "例如设置为 24 表示查询未来 24 小时内将开始的活动"
+    },
+    "daily_reminder_time_1": {
+        "description": "每日提醒时段1（HH:MM）",
+        "type": "string",
+        "default": "8:00",
+        "hint": "例如 8:00"
+    },
+    "daily_reminder_time_2": {
+        "description": "每日提醒时段2（HH:MM）",
+        "type": "string",
+        "default": "22:00",
+        "hint": "例如 22:00"
+    },
+    "daily_reminder_window_minutes": {
+        "description": "固定时段触发窗口（分钟）",
+        "type": "int",
+        "default": 8,
+        "hint": "进入时段后 N 分钟内触发一次"
+    },
+    "reminder_activity_kind_names": {
+        "description": "结束提醒通知的活动类型名称（多选）",
+        "type": "list",
+        "default": [
+            "多倍活动",
+            "活动",
+            "总力战大决战",
+            "爬塔",
+            "战术测试",
+            "指引任务",
+            "其他"
+        ],
+        "hint": "仅匹配这些类型才会提醒。可选：多倍活动、活动、总力战大决战、爬塔、战术测试、指引任务、其他"
+    },
+    "default_remind_minutes": {
+        "description": "默认提前提醒时间（分钟）",
+        "type": "int",
+        "default": 360,
+        "hint": "用户执行 /ba提醒开启 不带参数时使用该值"
+    },
+    "max_remind_minutes": {
+        "description": "允许设置的最大提前提醒时间（分钟）",
+        "type": "int",
+        "default": 1440,
+        "hint": "用于限制 /ba提醒开启 的最大参数，1440 表示 24 小时"
+    },
+    "enable_persona_polish": {
+        "description": "是否启用基于当前人格的回复润色",
+        "type": "bool",
+        "default": false,
+        "hint": "开启后，插件回复会先用当前会话人格进行润色再发送"
+    },
+    "persona_polish_model": {
+        "description": "润色时使用的模型名称（可选）",
+        "type": "string",
+        "default": "",
+        "hint": "留空使用当前会话模型；可填写模型名强制指定润色模型"
+    },
+    "whitelist_sessions": {
+        "description": "会话白名单（SID 列表）",
+        "type": "list",
+        "default": [],
+        "hint": "留空表示不启用白名单；填写后仅白名单内会话可触发。本插件建议填写 unified_msg_origin，例如 aiocqhttp:group:123456789"
+    },
+    "blacklist_sessions": {
+        "description": "会话黑名单（SID 列表）",
+        "type": "list",
+        "default": [],
+        "hint": "留空表示不启用黑名单；填写后黑名单内会话不可触发。若白名单与黑名单同时命中，则按不可触发处理"
+    }
 }

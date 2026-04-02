@@ -10,9 +10,21 @@ from astrbot.api.star import Context, Star, register
 
 
 @register(
-    "astrbot_plugin_blue_archive_helper", "binbin", "BA活动查询与结束提醒", "1.0.1"
+    "astrbot_plugin_blue_archive_helper", "binbin", "BA活动查询与结束提醒", "1.0.2"
 )
 class BlueArchiveHelper(Star):
+    SCHEDULE_CHECK_SECONDS = 30
+    ACTIVITY_KIND_LABELS = {
+        14: "活动",
+        15: "总力战大决战",
+        16: "多倍活动",
+        17: "爬塔",
+        18: "指引任务",
+        19: "战术测试",
+        31: "其他",
+    }
+    ACTIVITY_KIND_ORDER = [16, 14, 15, 17, 19, 18, 31]
+    ACTIVITY_KIND_NAME_TO_ID = {v: k for k, v in ACTIVITY_KIND_LABELS.items()}
     API_URL = "https://www.gamekee.com/v1/activity/page-list"
     API_HEADERS = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -38,11 +50,36 @@ class BlueArchiveHelper(Star):
         self.upcoming_window_seconds = (
             max(1, int(self.config.get("upcoming_window_hours", 24))) * 3600
         )
-        self.reminder_poll_seconds = (
-            max(1, int(self.config.get("reminder_poll_minutes", 30))) * 60
+        self.daily_reminder_time_1 = str(
+            self.config.get("daily_reminder_time_1", "03:55")
+        ).strip()
+        self.daily_reminder_time_2 = str(
+            self.config.get("daily_reminder_time_2", "13:55")
+        ).strip()
+        self.daily_reminder_window_seconds = (
+            max(1, int(self.config.get("daily_reminder_window_minutes", 8))) * 60
         )
+        self.reminder_activity_kind_ids = self._normalize_activity_kind_ids(
+            self.config.get(
+                "reminder_activity_kind_names",
+                [
+                    self.ACTIVITY_KIND_LABELS[x]
+                    for x in self.ACTIVITY_KIND_ORDER
+                    if x in self.ACTIVITY_KIND_LABELS
+                ],
+            )
+        )
+        if (
+            "reminder_activity_kind_names" not in self.config
+            and "reminder_activity_kind_ids" in self.config
+        ):
+            legacy_kind_ids = self._normalize_activity_kind_ids(
+                self.config.get("reminder_activity_kind_ids", [])
+            )
+            if legacy_kind_ids:
+                self.reminder_activity_kind_ids = legacy_kind_ids
         self.default_remind_minutes = max(
-            1, int(self.config.get("default_remind_minutes", 30))
+            1, int(self.config.get("default_remind_minutes", 360))
         )
         self.max_remind_minutes = max(
             self.default_remind_minutes,
@@ -113,6 +150,138 @@ class BlueArchiveHelper(Star):
         if isinstance(raw, str):
             return raw.strip().lower() in {"1", "true", "yes", "on"}
         return False
+
+    @classmethod
+    def _normalize_activity_kind_id(cls, raw: Any) -> int | None:
+        if raw is None:
+            return None
+        try:
+            kind_id = int(float(raw))
+        except (TypeError, ValueError):
+            return None
+        if kind_id == 0:
+            return 31
+        if kind_id in cls.ACTIVITY_KIND_LABELS:
+            return kind_id
+        return None
+
+    @classmethod
+    def _normalize_activity_kind_name(cls, raw: Any) -> int | None:
+        name = str(raw or "").strip()
+        if not name:
+            return None
+        if name in cls.ACTIVITY_KIND_NAME_TO_ID:
+            return cls.ACTIVITY_KIND_NAME_TO_ID[name]
+        return None
+
+    @classmethod
+    def _normalize_activity_kind_ids(cls, raw: Any) -> set[int]:
+        if isinstance(raw, str):
+            parts = [x.strip() for x in raw.split(",") if x.strip()]
+        elif isinstance(raw, list):
+            parts = raw
+        else:
+            parts = []
+        kind_ids: set[int] = set()
+        for part in parts:
+            kind_id = cls._normalize_activity_kind_name(part)
+            if kind_id is None:
+                kind_id = cls._normalize_activity_kind_id(part)
+            if kind_id is not None:
+                kind_ids.add(kind_id)
+        return kind_ids
+
+    @classmethod
+    def _resolve_activity_kind_id(cls, item: dict[str, Any]) -> int:
+        kind_id = cls._normalize_activity_kind_id(item.get("activity_kind_id"))
+        if kind_id is not None:
+            return kind_id
+        kind_name = str(item.get("activity_kind_name") or "").strip()
+        if not kind_name:
+            return 31
+        for k, name in cls.ACTIVITY_KIND_LABELS.items():
+            if name == kind_name:
+                return k
+        return 31
+
+    @classmethod
+    def _format_kind_labels(cls, kind_ids: set[int]) -> str:
+        if not kind_ids:
+            return "全部"
+        ordered = [x for x in cls.ACTIVITY_KIND_ORDER if x in kind_ids]
+        extras = sorted(kind_ids - set(ordered))
+        labels = [cls.ACTIVITY_KIND_LABELS.get(x, str(x)) for x in ordered + extras]
+        return " / ".join(labels)
+
+    @staticmethod
+    def _parse_daily_time(text: str) -> tuple[int, int] | None:
+        raw = str(text).strip()
+        if not raw:
+            return None
+        parts = raw.split(":")
+        if len(parts) != 2:
+            return None
+        try:
+            hour = int(parts[0])
+            minute = int(parts[1])
+        except ValueError:
+            return None
+        if not (0 <= hour <= 23 and 0 <= minute <= 59):
+            return None
+        return hour, minute
+
+    def _get_schedule_slots(self) -> list[tuple[str, int]]:
+        slots: list[tuple[str, int]] = []
+        seen: set[str] = set()
+        for raw in [self.daily_reminder_time_1, self.daily_reminder_time_2]:
+            parsed = self._parse_daily_time(raw)
+            if not parsed:
+                continue
+            hour, minute = parsed
+            slot_text = f"{hour:02d}:{minute:02d}"
+            if slot_text in seen:
+                continue
+            seen.add(slot_text)
+            slots.append((slot_text, hour * 3600 + minute * 60))
+        return slots
+
+    async def _get_due_schedule_slot_key(self) -> str | None:
+        slots = self._get_schedule_slots()
+        if not slots:
+            return None
+        now_ts = int(time.time())
+        local_now = time.localtime(now_ts)
+        day_prefix = time.strftime("%Y%m%d", local_now)
+        day_seconds = (
+            local_now.tm_hour * 3600 + local_now.tm_min * 60 + local_now.tm_sec
+        )
+        due_slot_key = ""
+        for slot_text, slot_seconds in slots:
+            passed = day_seconds - slot_seconds
+            if 0 <= passed < self.daily_reminder_window_seconds:
+                due_slot_key = f"{day_prefix}@{slot_text}"
+                break
+        if not due_slot_key:
+            return None
+        raw = await self.get_kv_data("schedule_triggered_slots", {})
+        triggered_slots = raw if isinstance(raw, dict) else {}
+        if due_slot_key in triggered_slots:
+            return None
+        return due_slot_key
+
+    async def _mark_schedule_slot_triggered(self, slot_key: str) -> None:
+        now_ts = int(time.time())
+        raw = await self.get_kv_data("schedule_triggered_slots", {})
+        triggered_slots = raw if isinstance(raw, dict) else {}
+        clean_slots = {
+            str(k): int(v)
+            for k, v in triggered_slots.items()
+            if isinstance(k, str)
+            and isinstance(v, (int, float, str))
+            and now_ts - int(float(v)) < 7 * 86400
+        }
+        clean_slots[slot_key] = now_ts
+        await self.put_kv_data("schedule_triggered_slots", clean_slots)
 
     def _is_allowed_umo(self, umo: str) -> bool:
         if self.whitelist_sessions and umo not in self.whitelist_sessions:
@@ -343,6 +512,11 @@ class BlueArchiveHelper(Star):
                 end_at = self._normalize_ts(item.get("end_at"))
                 if not begin_at or not end_at:
                     continue
+                kind_id = self._resolve_activity_kind_id(item)
+                if self.reminder_activity_kind_ids and (
+                    kind_id not in self.reminder_activity_kind_ids
+                ):
+                    continue
                 if begin_at > now_ts:
                     continue
                 if not (now_ts < end_at <= window_ts):
@@ -365,12 +539,16 @@ class BlueArchiveHelper(Star):
     async def _reminder_loop(self):
         while True:
             try:
-                await self._process_reminders_once()
+                slot_key = await self._get_due_schedule_slot_key()
+                if slot_key:
+                    await self._process_reminders_once()
+                    await self._mark_schedule_slot_triggered(slot_key)
+                await asyncio.sleep(self.SCHEDULE_CHECK_SECONDS)
             except asyncio.CancelledError:
                 raise
             except Exception as e:
                 logger.error(f"BA结束提醒任务异常: {e}")
-            await asyncio.sleep(self.reminder_poll_seconds)
+                await asyncio.sleep(self.SCHEDULE_CHECK_SECONDS)
 
     @filter.command("ba进行中")
     async def ba_activity_command(self, event: AstrMessageEvent):
@@ -466,7 +644,9 @@ class BlueArchiveHelper(Star):
         status_text = (
             f"本群提醒状态：{'开启' if enabled else '关闭'}\n"
             f"提前提醒分钟：{minutes}\n"
-            f"轮询周期：{self.reminder_poll_seconds // 60} 分钟\n"
+            f"通知活动类型：{self._format_kind_labels(self.reminder_activity_kind_ids)}\n"
+            f"固定时段：{self.daily_reminder_time_1} / {self.daily_reminder_time_2}\n"
+            f"固定时段窗口：{self.daily_reminder_window_seconds // 60} 分钟\n"
             f"即将开始窗口：{self.upcoming_window_seconds // 3600} 小时\n"
             f"当前启用提醒的群数量：{all_enabled}"
         )
