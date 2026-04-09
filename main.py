@@ -559,13 +559,17 @@ class BlueArchiveHelper(Star):
                 if sent.get(sent_key) == end_at:
                     continue
                 due_items.append(item)
-                sent[sent_key] = end_at
-                sent_changed = True
             if due_items:
                 text = self._build_reminder_text(remind_minutes, due_items)
                 text = await self._polish_text(text, umo)
                 ok = await self.ctx.send_message(umo, MessageChain().message(text))
-                if not ok:
+                if ok:
+                    for item in due_items:
+                        end_at = self._normalize_ts(item.get("end_at")) or 0
+                        sent_key = f"{umo}::{self._activity_key(item)}"
+                        sent[sent_key] = end_at
+                    sent_changed = True
+                else:
                     logger.warning(f"BA结束提醒发送失败，找不到会话平台: {umo}")
         if sent_changed:
             await self._save_sent_reminders(sent)
