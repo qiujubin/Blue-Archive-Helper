@@ -98,6 +98,10 @@ class BlueArchiveHelper(Star):
             self.config.get("blacklist_sessions", [])
         )
         self._reminder_task: asyncio.Task | None = None
+        self._storage_lock: asyncio.Lock = asyncio.Lock()
+        self._activity_cache: dict[str, tuple[float, list[dict[str, Any]]]] = {}
+        self._CACHE_TTL_SECONDS = 300
+        self._MAX_CACHE_ENTRIES = 10
 
     async def initialize(self):
         if self._reminder_task is None or self._reminder_task.done():
@@ -190,6 +194,22 @@ class BlueArchiveHelper(Star):
             if kind_id is not None:
                 kind_ids.add(kind_id)
         return kind_ids
+
+    def _clean_expired_cache(self) -> None:
+        now = time.time()
+        expired_keys = [
+            k for k, (ts, _) in self._activity_cache.items()
+            if now - ts > self._CACHE_TTL_SECONDS
+        ]
+        for k in expired_keys:
+            del self._activity_cache[k]
+        if len(self._activity_cache) > self._MAX_CACHE_ENTRIES:
+            sorted_keys = sorted(
+                self._activity_cache.keys(),
+                key=lambda k: self._activity_cache[k][0]
+            )
+            for k in sorted_keys[:len(self._activity_cache) - self._MAX_CACHE_ENTRIES]:
+                del self._activity_cache[k]
 
     @classmethod
     def _resolve_activity_kind_id(cls, item: dict[str, Any]) -> int:
@@ -358,6 +378,14 @@ class BlueArchiveHelper(Star):
         return f"{title}|{end_at}"
 
     async def _fetch_activities(self) -> list[dict[str, Any]]:
+        cache_key = "activities"
+        now = time.time()
+        cached = self._activity_cache.get(cache_key)
+        if cached:
+            ts, data = cached
+            if now - ts <= self._CACHE_TTL_SECONDS:
+                logger.debug("使用缓存的活动数据")
+                return data
         for i in range(2):
             try:
                 async with httpx.AsyncClient(timeout=self.api_timeout_seconds) as client:
@@ -375,6 +403,8 @@ class BlueArchiveHelper(Star):
                     continue
                 data = payload.get("data")
                 if isinstance(data, list):
+                    self._activity_cache[cache_key] = (now, data)
+                    self._clean_expired_cache()
                     return data
             except Exception as e:
                 logger.warning(f"BA活动接口请求失败({i + 1}/2): {e}")
@@ -447,28 +477,32 @@ class BlueArchiveHelper(Star):
         return self._build_ongoing_text(ongoing), self._build_upcoming_text(upcoming)
 
     async def _get_subscriptions(self) -> dict[str, dict[str, Any]]:
-        raw = await self.get_kv_data("subscriptions", {})
-        if isinstance(raw, dict):
-            return raw
-        return {}
+        async with self._storage_lock:
+            raw = await self.get_kv_data("subscriptions", {})
+            if isinstance(raw, dict):
+                return raw
+            return {}
 
     async def _save_subscriptions(
         self, subscriptions: dict[str, dict[str, Any]]
     ) -> None:
-        await self.put_kv_data("subscriptions", subscriptions)
+        async with self._storage_lock:
+            await self.put_kv_data("subscriptions", subscriptions)
 
     async def _get_sent_reminders(self) -> dict[str, int]:
-        raw = await self.get_kv_data("sent_reminders", {})
-        if isinstance(raw, dict):
-            return {
-                str(k): int(v)
-                for k, v in raw.items()
-                if isinstance(k, str) and isinstance(v, (int, float, str))
-            }
-        return {}
+        async with self._storage_lock:
+            raw = await self.get_kv_data("sent_reminders", {})
+            if isinstance(raw, dict):
+                return {
+                    str(k): int(v)
+                    for k, v in raw.items()
+                    if isinstance(k, str) and isinstance(v, (int, float, str))
+                }
+            return {}
 
     async def _save_sent_reminders(self, sent: dict[str, int]) -> None:
-        await self.put_kv_data("sent_reminders", sent)
+        async with self._storage_lock:
+            await self.put_kv_data("sent_reminders", sent)
 
     def _build_reminder_text(
         self,
