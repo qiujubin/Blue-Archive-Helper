@@ -1,0 +1,3776 @@
+{
+	"code": 200,
+	"crypt": false,
+	"data": [
+		{
+			"id": 10000,
+			"bulletType": "Explosion",
+			"club": "Kohshinjo68",
+			"name": "爱露",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"阿露",
+				"阿鲁"
+			]
+		},
+		{
+			"id": 10001,
+			"bulletType": "Explosion",
+			"club": "SPTF",
+			"name": "艾米",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"拉链"
+			]
+		},
+		{
+			"id": 10002,
+			"bulletType": "Mystic",
+			"club": "GourmetClub",
+			"name": "晴奈",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"神秘狙"
+			]
+		},
+		{
+			"id": 10003,
+			"bulletType": "Pierce",
+			"club": "RemedialClass",
+			"name": "日富美",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"啊哈哈"
+			]
+		},
+		{
+			"id": 10004,
+			"bulletType": "Explosion",
+			"club": "Fuuki",
+			"name": "日奈",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"hina"
+			]
+		},
+		{
+			"id": 10005,
+			"bulletType": "Pierce",
+			"club": "Countermeasure",
+			"name": "星野",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"大叔"
+			]
+		},
+		{
+			"id": 10006,
+			"bulletType": "Pierce",
+			"club": "Fuuki",
+			"name": "伊织",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"佐仓",
+				"三枪"
+			]
+		},
+		{
+			"id": 10007,
+			"bulletType": "Pierce",
+			"club": "Veritas",
+			"name": "真纪",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"maki",
+				"兄弟"
+			]
+		},
+		{
+			"id": 10008,
+			"bulletType": "Pierce",
+			"club": "CleanNClearing",
+			"name": "妮露",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"尼禄"
+			]
+		},
+		{
+			"id": 10009,
+			"bulletType": "Explosion",
+			"club": "GourmetClub",
+			"name": "泉",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"老八"
+			]
+		},
+		{
+			"id": 10010,
+			"bulletType": "Explosion",
+			"club": "Countermeasure",
+			"name": "白子",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10011,
+			"bulletType": "Explosion",
+			"club": "Meihuayuan",
+			"name": "瞬",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10012,
+			"bulletType": "Pierce",
+			"club": "TrainingClub",
+			"name": "堇",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SG",
+			"nameAlias": [
+				"运动妹"
+			]
+		},
+		{
+			"id": 10013,
+			"bulletType": "Pierce",
+			"club": "Justice",
+			"name": "鹤城",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SG",
+			"nameAlias": [
+				"颜艺"
+			]
+		},
+		{
+			"id": 10014,
+			"bulletType": "Mystic",
+			"club": "NinpoKenkyubu",
+			"name": "泉奈",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"小狐狸"
+			]
+		},
+		{
+			"id": 10015,
+			"bulletType": "Mystic",
+			"club": "GameDev",
+			"name": "爱丽丝",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "RG",
+			"nameAlias": []
+		},
+		{
+			"id": 10016,
+			"bulletType": "Pierce",
+			"club": "GameDev",
+			"name": "绿",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10017,
+			"bulletType": "Pierce",
+			"club": "RedwinterSecretary",
+			"name": "切里诺",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"斯大罗",
+				"斯大萝"
+			]
+		},
+		{
+			"id": 10018,
+			"bulletType": "Pierce",
+			"club": "GameDev",
+			"name": "柚子",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "GL",
+			"nameAlias": [
+				"yuzu"
+			]
+		},
+		{
+			"id": 10019,
+			"bulletType": "Explosion",
+			"club": "RemedialClass",
+			"name": "梓",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10020,
+			"bulletType": "Explosion",
+			"club": "RemedialClass",
+			"name": "小春",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10021,
+			"bulletType": "Mystic",
+			"club": "RemedialClass",
+			"name": "梓（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水梓"
+			]
+		},
+		{
+			"id": 10022,
+			"bulletType": "Explosion",
+			"club": "Fuuki",
+			"name": "日奈（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"水日奈",
+				"水魔王"
+			]
+		},
+		{
+			"id": 10023,
+			"bulletType": "Explosion",
+			"club": "Fuuki",
+			"name": "伊织（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水佐仓"
+			]
+		},
+		{
+			"id": 10024,
+			"bulletType": "Mystic",
+			"club": "Countermeasure",
+			"name": "白子（骑行）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"车白"
+			]
+		},
+		{
+			"id": 10025,
+			"bulletType": "Explosion",
+			"club": "Meihuayuan",
+			"name": "瞬（小）",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"幼瞬"
+			]
+		},
+		{
+			"id": 10026,
+			"bulletType": "Explosion",
+			"club": "CleanNClearing",
+			"name": "妮露（邦妮）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"红兔",
+				"兔妮露"
+			]
+		},
+		{
+			"id": 10027,
+			"bulletType": "Mystic",
+			"club": "CleanNClearing",
+			"name": "花凛（邦妮）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"黑兔",
+				"兔花凛"
+			]
+		},
+		{
+			"id": 10028,
+			"bulletType": "Mystic",
+			"club": "CleanNClearing",
+			"name": "明日奈（邦妮）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"蓝兔",
+				"兔明日奈",
+				"兔亚丝娜"
+			]
+		},
+		{
+			"id": 10029,
+			"bulletType": "Mystic",
+			"club": "HoukagoDessert",
+			"name": "夏",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"小夏"
+			]
+		},
+		{
+			"id": 10030,
+			"bulletType": "Mystic",
+			"club": "Fuuki",
+			"name": "千夏（温泉）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"温泉针"
+			]
+		},
+		{
+			"id": 10031,
+			"bulletType": "Pierce",
+			"club": "Kohshinjo68",
+			"name": "爱露（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"春露",
+				"春鲁",
+				"春阿鲁",
+				"春阿露"
+			]
+		},
+		{
+			"id": 10032,
+			"bulletType": "Mystic",
+			"club": "Kohshinjo68",
+			"name": "睦月（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"春月",
+				"春睦月"
+			]
+		},
+		{
+			"id": 10033,
+			"bulletType": "Mystic",
+			"club": "EmptyClub",
+			"name": "若藻",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"大狐狸"
+			]
+		},
+		{
+			"id": 10034,
+			"bulletType": "Mystic",
+			"club": "Shugyobu",
+			"name": "三森",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10035,
+			"bulletType": "Explosion",
+			"club": "BookClub",
+			"name": "忧",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": [
+				"ui"
+			]
+		},
+		{
+			"id": 10036,
+			"bulletType": "Mystic",
+			"club": "SisterHood",
+			"name": "日向",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10037,
+			"bulletType": "Pierce",
+			"club": "RedwinterSecretary",
+			"name": "真里奈",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"保洁",
+				"玛丽娜"
+			]
+		},
+		{
+			"id": 10038,
+			"bulletType": "Pierce",
+			"club": "RabbitPlatoon",
+			"name": "宫子",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": []
+		},
+		{
+			"id": 10039,
+			"bulletType": "Pierce",
+			"club": "RabbitPlatoon",
+			"name": "美游",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10040,
+			"bulletType": "Mystic",
+			"club": "NinpoKenkyubu",
+			"name": "月咏",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"树忍",
+				"巨忍"
+			]
+		},
+		{
+			"id": 10041,
+			"bulletType": "Explosion",
+			"club": "AriusSqud",
+			"name": "美咲",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "RL",
+			"nameAlias": []
+		},
+		{
+			"id": 10042,
+			"bulletType": "Explosion",
+			"club": "AriusSqud",
+			"name": "亚津子",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"公主"
+			]
+		},
+		{
+			"id": 10043,
+			"bulletType": "Pierce",
+			"club": "EmptyClub",
+			"name": "若藻（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水若藻",
+				"水藻"
+			]
+		},
+		{
+			"id": 10044,
+			"bulletType": "Explosion",
+			"club": "Countermeasure",
+			"name": "野宫（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"水富婆",
+				"水野宫",
+				"水nonomi"
+			]
+		},
+		{
+			"id": 10045,
+			"bulletType": "Explosion",
+			"club": "Countermeasure",
+			"name": "星野（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": [
+				"水星野",
+				"水大叔"
+			]
+		},
+		{
+			"id": 10046,
+			"bulletType": "Mystic",
+			"club": "NinpoKenkyubu",
+			"name": "泉奈（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"水狐狸",
+				"水忍忍"
+			]
+		},
+		{
+			"id": 10047,
+			"bulletType": "Mystic",
+			"club": "Onmyobu",
+			"name": "千世（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "GL",
+			"nameAlias": [
+				"水千世",
+				"水知世"
+			]
+		},
+		{
+			"id": 10048,
+			"bulletType": "Explosion",
+			"club": "AriusSqud",
+			"name": "纱织",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10049,
+			"bulletType": "Pierce",
+			"club": "HoukagoDessert",
+			"name": "和纱",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"肥猫",
+				"甜品猫",
+				"甜点猫"
+			]
+		},
+		{
+			"id": 10050,
+			"bulletType": "Pierce",
+			"club": "Meihuayuan",
+			"name": "心奈",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10051,
+			"bulletType": "Mystic",
+			"club": "Engineer",
+			"name": "歌原（应援团）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"拉炮"
+			]
+		},
+		{
+			"id": 10052,
+			"bulletType": "Mystic",
+			"club": "TheSeminar",
+			"name": "诺亚",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"noa"
+			]
+		},
+		{
+			"id": 10053,
+			"bulletType": "Mystic",
+			"club": "TheSeminar",
+			"name": "优香（体操服）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"体香"
+			]
+		},
+		{
+			"id": 10054,
+			"bulletType": "Mystic",
+			"club": "SisterHood",
+			"name": "玛丽（体操服）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"体玛"
+			]
+		},
+		{
+			"id": 10055,
+			"bulletType": "Explosion",
+			"club": "Class227",
+			"name": "时雨",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "GL",
+			"nameAlias": []
+		},
+		{
+			"id": 10056,
+			"bulletType": "Pierce",
+			"club": "KnightsHospitaller",
+			"name": "芹娜（圣诞）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"圣诞小护士",
+				"圣小护"
+			]
+		},
+		{
+			"id": 10057,
+			"bulletType": "Explosion",
+			"club": "GourmetClub",
+			"name": "晴奈（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"春奈"
+			]
+		},
+		{
+			"id": 10058,
+			"bulletType": "Explosion",
+			"club": "KnightsHospitaller",
+			"name": "美祢",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"团长"
+			]
+		},
+		{
+			"id": 10059,
+			"bulletType": "Pierce",
+			"club": "TeaParty",
+			"name": "未花",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"mika"
+			]
+		},
+		{
+			"id": 10060,
+			"bulletType": "Explosion",
+			"club": "HotSpringsDepartment",
+			"name": "惠",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "FT",
+			"nameAlias": [
+				"大火龙"
+			]
+		},
+		{
+			"id": 10061,
+			"bulletType": "Mystic",
+			"club": "SisterHood",
+			"name": "樱子",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10062,
+			"bulletType": "Explosion",
+			"club": "CleanNClearing",
+			"name": "时",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"toki",
+				"季"
+			]
+		},
+		{
+			"id": 10063,
+			"bulletType": "Mystic",
+			"club": "TheSeminar",
+			"name": "小雪",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": []
+		},
+		{
+			"id": 10064,
+			"bulletType": "Mystic",
+			"club": "Kohshinjo68",
+			"name": "佳代子（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"春佳代子",
+				"春代",
+				"春佳"
+			]
+		},
+		{
+			"id": 10065,
+			"bulletType": "Mystic",
+			"club": "Onmyobu",
+			"name": "果穗",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10066,
+			"bulletType": "Mystic",
+			"club": "GameDev",
+			"name": "爱丽丝（女仆）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "RG",
+			"nameAlias": [
+				"女仆爱"
+			]
+		},
+		{
+			"id": 10067,
+			"bulletType": "Explosion",
+			"club": "CleanNClearing",
+			"name": "时（邦妮）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"兔时",
+				"兔季"
+			]
+		},
+		{
+			"id": 10068,
+			"bulletType": "Pierce",
+			"club": "TrinityVigilance",
+			"name": "玲纱",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"芋泥小孩"
+			]
+		},
+		{
+			"id": 10069,
+			"bulletType": "Explosion",
+			"club": "BlackTortoisePromenade",
+			"name": "瑠海",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"炒饭婆"
+			]
+		},
+		{
+			"id": 10070,
+			"bulletType": "Explosion",
+			"club": "Genryumon",
+			"name": "南",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"发哥"
+			]
+		},
+		{
+			"id": 10071,
+			"bulletType": "Explosion",
+			"club": "RabbitPlatoon",
+			"name": "宫子（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"水宫子"
+			]
+		},
+		{
+			"id": 10072,
+			"bulletType": "Explosion",
+			"club": "RabbitPlatoon",
+			"name": "咲（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "MG",
+			"nameAlias": [
+				"水咲",
+				"水saki"
+			]
+		},
+		{
+			"id": 10073,
+			"bulletType": "Pierce",
+			"club": "BookClub",
+			"name": "忧（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水忧",
+				"水ui"
+			]
+		},
+		{
+			"id": 10074,
+			"bulletType": "Sonic",
+			"club": "RemedialClass",
+			"name": "花子（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水花子"
+			]
+		},
+		{
+			"id": 10075,
+			"bulletType": "Pierce",
+			"club": "KnowledgeLiberationFront",
+			"name": "芽瑠",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"梅露"
+			]
+		},
+		{
+			"id": 10076,
+			"bulletType": "Explosion",
+			"club": "Engineer",
+			"name": "琴里（应援团）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"拉琴里"
+			]
+		},
+		{
+			"id": 10077,
+			"bulletType": "Sonic",
+			"club": "Justice",
+			"name": "一花",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10078,
+			"bulletType": "Sonic",
+			"club": "HotSpringsDepartment",
+			"name": "霞",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10079,
+			"bulletType": "Pierce",
+			"club": "EmptyClub",
+			"name": "御坂美琴",
+			"cnName": "该字段已弃用",
+			"school": "Tokiwadai",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"炮姐"
+			]
+		},
+		{
+			"id": 10080,
+			"bulletType": "Explosion",
+			"club": "EmptyClub",
+			"name": "食蜂操祈",
+			"cnName": "该字段已弃用",
+			"school": "Tokiwadai",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"女王"
+			]
+		},
+		{
+			"id": 10081,
+			"bulletType": "Sonic",
+			"club": "Hyakkayouran",
+			"name": "紫",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"油咖喱"
+			]
+		},
+		{
+			"id": 10082,
+			"bulletType": "Sonic",
+			"club": "Hyakkayouran",
+			"name": "莲华",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10083,
+			"bulletType": "Sonic",
+			"club": "Hyakkayouran",
+			"name": "桔梗",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10084,
+			"bulletType": "Pierce",
+			"club": "Veritas",
+			"name": "小玉（露营）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"山玉"
+			]
+		},
+		{
+			"id": 10085,
+			"bulletType": "Explosion",
+			"club": "Veritas",
+			"name": "晴（露营）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"红薯"
+			]
+		},
+		{
+			"id": 10086,
+			"bulletType": "Explosion",
+			"club": "Fuuki",
+			"name": "日奈（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"礼奈",
+				"礼服日奈"
+			]
+		},
+		{
+			"id": 10087,
+			"bulletType": "Explosion",
+			"club": "Fuuki",
+			"name": "亚子（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"礼亚",
+				"礼服亚子"
+			]
+		},
+		{
+			"id": 10088,
+			"bulletType": "Pierce",
+			"club": "Kohshinjo68",
+			"name": "佳代子（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"礼佳"
+			]
+		},
+		{
+			"id": 10089,
+			"bulletType": "Pierce",
+			"club": "Kohshinjo68",
+			"name": "爱露（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": [
+				"礼露",
+				"礼服阿露",
+				"礼服阿鲁",
+				"礼社长"
+			]
+		},
+		{
+			"id": 10090,
+			"bulletType": "Mystic",
+			"club": "MatsuriOffice",
+			"name": "海香",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10091,
+			"bulletType": "Explosion",
+			"club": "HoukagoDessert",
+			"name": "和纱（乐队）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"乐队和纱",
+				"乐队肥猫"
+			]
+		},
+		{
+			"id": 10092,
+			"bulletType": "Explosion",
+			"club": "HoukagoDessert",
+			"name": "好美（乐队）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"乐队好美",
+				"乐队喜美",
+				"奶龙"
+			]
+		},
+		{
+			"id": 10093,
+			"bulletType": "Sonic",
+			"club": "ShinySparkleSociety",
+			"name": "绮罗罗",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10094,
+			"bulletType": "Sonic",
+			"club": "GameDev",
+			"name": "桃（女仆）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"女仆桃"
+			]
+		},
+		{
+			"id": 10095,
+			"bulletType": "Sonic",
+			"club": "GameDev",
+			"name": "绿（女仆）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"女仆绿"
+			]
+		},
+		{
+			"id": 10096,
+			"bulletType": "Explosion",
+			"club": "PublicPeaceBureau",
+			"name": "康娜（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水局长"
+			]
+		},
+		{
+			"id": 10097,
+			"bulletType": "Sonic",
+			"club": "RabbitPlatoon",
+			"name": "萌绘（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水萌绘",
+				"水moe"
+			]
+		},
+		{
+			"id": 10098,
+			"bulletType": "Mystic",
+			"club": "Countermeasure",
+			"name": "星野（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"战星"
+			]
+		},
+		{
+			"id": 10099,
+			"bulletType": "Mystic",
+			"club": "Countermeasure",
+			"name": "星野（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SG",
+			"nameAlias": [
+				"战星"
+			]
+		},
+		{
+			"id": 10100,
+			"bulletType": "Mystic",
+			"club": "AbydosStudentCouncil",
+			"name": "白子＊恐怖",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"黑子",
+				"大白子"
+			]
+		},
+		{
+			"id": 10101,
+			"bulletType": "Mystic",
+			"club": "AriusSqud",
+			"name": "纱织（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水纱织"
+			]
+		},
+		{
+			"id": 10102,
+			"bulletType": "Pierce",
+			"club": "AriusSqud",
+			"name": "日和（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水日和"
+			]
+		},
+		{
+			"id": 10103,
+			"bulletType": "Pierce",
+			"club": "RedwinterSecretary",
+			"name": "真里奈（旗袍）",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"旗袍保洁"
+			]
+		},
+		{
+			"id": 10104,
+			"bulletType": "Mystic",
+			"club": "BlackTortoisePromenade",
+			"name": "丽情",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"李青"
+			]
+		},
+		{
+			"id": 10105,
+			"bulletType": "Explosion",
+			"club": "SisterHood",
+			"name": "玛丽（偶像）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"偶玛",
+				"爱玛",
+				"偶像玛丽"
+			]
+		},
+		{
+			"id": 10106,
+			"bulletType": "Explosion",
+			"club": "SisterHood",
+			"name": "樱子（偶像）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"偶像樱子"
+			]
+		},
+		{
+			"id": 10107,
+			"bulletType": "Sonic",
+			"club": "PandemoniumSociety",
+			"name": "千秋",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10108,
+			"bulletType": "Explosion",
+			"club": "TheSeminar",
+			"name": "优香（睡衣）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"睡衣邮箱"
+			]
+		},
+		{
+			"id": 10109,
+			"bulletType": "Pierce",
+			"club": "TheSeminar",
+			"name": "诺亚（睡衣）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"睡衣诺亚",
+				"睡衣noa"
+			]
+		},
+		{
+			"id": 10110,
+			"bulletType": "Pierce",
+			"club": "TeaParty",
+			"name": "圣娅",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10111,
+			"bulletType": "Pierce",
+			"club": "CleanNClearing",
+			"name": "妮露（制服）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"制服妮露"
+			]
+		},
+		{
+			"id": 10112,
+			"bulletType": "Explosion",
+			"club": "CleanNClearing",
+			"name": "明日奈（制服）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"制服明日奈",
+				"制服亚斯娜"
+			]
+		},
+		{
+			"id": 10113,
+			"bulletType": "Sonic",
+			"club": "Emergentology",
+			"name": "濑名（便服）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "GL",
+			"nameAlias": [
+				"私服救护车"
+			]
+		},
+		{
+			"id": 10114,
+			"bulletType": "Mystic",
+			"club": "FoodService",
+			"name": "朱莉（打工）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"打工朱莉"
+			]
+		},
+		{
+			"id": 10115,
+			"bulletType": "Sonic",
+			"club": "TrainingClub",
+			"name": "丽",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "RL",
+			"nameAlias": [
+				"棒球"
+			]
+		},
+		{
+			"id": 10116,
+			"bulletType": "Sonic",
+			"club": "AriusSqud",
+			"name": "纱织（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"礼服纱织"
+			]
+		},
+		{
+			"id": 10117,
+			"bulletType": "Sonic",
+			"club": "CentralControlCenter",
+			"name": "光",
+			"cnName": "该字段已弃用",
+			"school": "Highlander",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"橘光明"
+			]
+		},
+		{
+			"id": 10118,
+			"bulletType": "Sonic",
+			"club": "CentralControlCenter",
+			"name": "望",
+			"cnName": "该字段已弃用",
+			"school": "Highlander",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"橘希望"
+			]
+		},
+		{
+			"id": 10119,
+			"bulletType": "Sonic",
+			"club": "Hyakkayouran",
+			"name": "名草",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10120,
+			"bulletType": "Explosion",
+			"club": "HoukagoDessert",
+			"name": "夏（乐队）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"乐队夏",
+				"乐队小夏"
+			]
+		},
+		{
+			"id": 10121,
+			"bulletType": "Pierce",
+			"club": "Hyakkayouran",
+			"name": "紫（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水紫草"
+			]
+		},
+		{
+			"id": 10122,
+			"bulletType": "Sonic",
+			"club": "TeaParty",
+			"name": "未花（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"水未花",
+				"水mika"
+			]
+		},
+		{
+			"id": 10123,
+			"bulletType": "Pierce",
+			"club": "TeaParty",
+			"name": "圣娅（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水圣娅"
+			]
+		},
+		{
+			"id": 10124,
+			"bulletType": "Pierce",
+			"club": "Justice",
+			"name": "莲见（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水莲见"
+			]
+		},
+		{
+			"id": 10125,
+			"bulletType": "Sonic",
+			"club": "OccultClub",
+			"name": "绘里",
+			"cnName": "该字段已弃用",
+			"school": "WildHunt",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10126,
+			"bulletType": "Mystic",
+			"club": "OccultClub",
+			"name": "庚",
+			"cnName": "该字段已弃用",
+			"school": "WildHunt",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 10127,
+			"bulletType": "Sonic",
+			"club": "FreeTradeCartel",
+			"name": "美代",
+			"cnName": "该字段已弃用",
+			"school": "WildHunt",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10128,
+			"bulletType": "Sonic",
+			"club": "FreeTradeCartel",
+			"name": "冬",
+			"cnName": "该字段已弃用",
+			"school": "WildHunt",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10129,
+			"bulletType": "Sonic",
+			"club": "TrinityVigilance",
+			"name": "铃美（魔法）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10130,
+			"bulletType": "Mystic",
+			"club": "NicomediasTroop",
+			"name": "昴",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10131,
+			"bulletType": "Mystic",
+			"club": "PublishingDepartment",
+			"name": "贵音",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10132,
+			"bulletType": "Pierce",
+			"club": "NinpoKenkyubu",
+			"name": "月咏（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": []
+		},
+		{
+			"id": 10133,
+			"bulletType": "Explosion",
+			"club": "TheSeminar",
+			"name": "莉音（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 10134,
+			"bulletType": "Mystic",
+			"club": "GameDev",
+			"name": "爱丽丝（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 10135,
+			"bulletType": "Mystic",
+			"club": "SPTF",
+			"name": "柯伊",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "RG",
+			"nameAlias": []
+		},
+		{
+			"id": 10136,
+			"bulletType": "Explosion",
+			"club": "SPTF",
+			"name": "艾米（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 10137,
+			"bulletType": "Mystic",
+			"club": "PublicPeaceBureau",
+			"name": "木乃香",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 10138,
+			"bulletType": "Explosion",
+			"club": "OccultClub",
+			"name": "丽奈",
+			"cnName": "该字段已弃用",
+			"school": "WildHunt",
+			"squadType": "Main",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 13000,
+			"bulletType": "Pierce",
+			"club": "CleanNClearing",
+			"name": "茜",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"女仆"
+			]
+		},
+		{
+			"id": 13001,
+			"bulletType": "Mystic",
+			"club": "Onmyobu",
+			"name": "千世",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "GL",
+			"nameAlias": []
+		},
+		{
+			"id": 13002,
+			"bulletType": "Explosion",
+			"club": "GourmetClub",
+			"name": "明里",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 13003,
+			"bulletType": "Pierce",
+			"club": "Justice",
+			"name": "莲见",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"朝夕"
+			]
+		},
+		{
+			"id": 13004,
+			"bulletType": "Pierce",
+			"club": "Countermeasure",
+			"name": "野宫",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"富婆",
+				"nonomi"
+			]
+		},
+		{
+			"id": 13005,
+			"bulletType": "Explosion",
+			"club": "Kohshinjo68",
+			"name": "佳代子",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 13006,
+			"bulletType": "Explosion",
+			"club": "Kohshinjo68",
+			"name": "睦月",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"小恶魔"
+			]
+		},
+		{
+			"id": 13007,
+			"bulletType": "Pierce",
+			"club": "GourmetClub",
+			"name": "纯子",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"小火龙"
+			]
+		},
+		{
+			"id": 13008,
+			"bulletType": "Explosion",
+			"club": "Countermeasure",
+			"name": "芹香",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"黑猫"
+			]
+		},
+		{
+			"id": 13009,
+			"bulletType": "Pierce",
+			"club": "Shugyobu",
+			"name": "椿",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"狗盾"
+			]
+		},
+		{
+			"id": 13010,
+			"bulletType": "Explosion",
+			"club": "TheSeminar",
+			"name": "优香",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "Tanker",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"邮箱",
+				"没包人"
+			]
+		},
+		{
+			"id": 13011,
+			"bulletType": "Pierce",
+			"club": "GameDev",
+			"name": "桃",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 13012,
+			"bulletType": "Explosion",
+			"club": "anzenkyoku",
+			"name": "桐乃",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"小警察"
+			]
+		},
+		{
+			"id": 13013,
+			"bulletType": "Sonic",
+			"club": "KnowledgeLiberationFront",
+			"name": "红叶",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "RL",
+			"nameAlias": []
+		},
+		{
+			"id": 13014,
+			"bulletType": "Sonic",
+			"club": "Hyakkayouran",
+			"name": "莲华（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水莲华"
+			]
+		},
+		{
+			"id": 16000,
+			"bulletType": "Explosion",
+			"club": "Kohshinjo68",
+			"name": "春香",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"遥香"
+			]
+		},
+		{
+			"id": 16001,
+			"bulletType": "Mystic",
+			"club": "CleanNClearing",
+			"name": "明日奈",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"亚丝娜"
+			]
+		},
+		{
+			"id": 16002,
+			"bulletType": "Pierce",
+			"club": "Engineer",
+			"name": "琴里",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "MG",
+			"nameAlias": [
+				"小鸟盾"
+			]
+		},
+		{
+			"id": 16003,
+			"bulletType": "Explosion",
+			"club": "TrinityVigilance",
+			"name": "铃美",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"闪光弹"
+			]
+		},
+		{
+			"id": 16004,
+			"bulletType": "Pierce",
+			"club": "MatsuriOffice",
+			"name": "菲娜",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": []
+		},
+		{
+			"id": 16005,
+			"bulletType": "Mystic",
+			"club": "Justice",
+			"name": "鹤城（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SG",
+			"nameAlias": [
+				"水鹤城",
+				"水颜艺",
+				"泳装鹤城"
+			]
+		},
+		{
+			"id": 16006,
+			"bulletType": "Explosion",
+			"club": "GourmetClub",
+			"name": "泉（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "MG",
+			"nameAlias": [
+				"水老八"
+			]
+		},
+		{
+			"id": 16007,
+			"bulletType": "Pierce",
+			"club": "RedwinterSecretary",
+			"name": "巴",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": [
+				"政委"
+			]
+		},
+		{
+			"id": 16008,
+			"bulletType": "Pierce",
+			"club": "anzenkyoku",
+			"name": "吹雪",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"摆子姐",
+				"甜甜圈"
+			]
+		},
+		{
+			"id": 16009,
+			"bulletType": "Mystic",
+			"club": "NinpoKenkyubu",
+			"name": "满",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 16010,
+			"bulletType": "Explosion",
+			"club": "Engineer",
+			"name": "响（应援团）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MT",
+			"nameAlias": [
+				"拉拉响"
+			]
+		},
+		{
+			"id": 16011,
+			"bulletType": "Mystic",
+			"club": "Justice",
+			"name": "莲见（体操服）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"体莲"
+			]
+		},
+		{
+			"id": 16012,
+			"bulletType": "Mystic",
+			"club": "GourmetClub",
+			"name": "纯子（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"春小火龙",
+				"春纯子"
+			]
+		},
+		{
+			"id": 16013,
+			"bulletType": "Mystic",
+			"club": "RemedialClass",
+			"name": "小春（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水小春"
+			]
+		},
+		{
+			"id": 16014,
+			"bulletType": "Mystic",
+			"club": "PandemoniumSociety",
+			"name": "伊吹",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 16015,
+			"bulletType": "Explosion",
+			"club": "HoukagoDessert",
+			"name": "爱理（乐队）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"乐队冰淇淋"
+			]
+		},
+		{
+			"id": 16016,
+			"bulletType": "Explosion",
+			"club": "KnightsHospitaller",
+			"name": "美祢（偶像）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": [
+				"偶像团长"
+			]
+		},
+		{
+			"id": 16017,
+			"bulletType": "Sonic",
+			"club": "FreightLogisticsDepartment",
+			"name": "青叶",
+			"cnName": "该字段已弃用",
+			"school": "Highlander",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Tanker",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 16018,
+			"bulletType": "Sonic",
+			"club": "EmptyClub",
+			"name": "兰舞",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 16019,
+			"bulletType": "Pierce",
+			"club": "CleanNClearing",
+			"name": "时（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Main",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20000,
+			"bulletType": "Explosion",
+			"club": "Engineer",
+			"name": "响",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MT",
+			"nameAlias": []
+		},
+		{
+			"id": 20001,
+			"bulletType": "Pierce",
+			"club": "CleanNClearing",
+			"name": "花凛",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"黑皮"
+			]
+		},
+		{
+			"id": 20002,
+			"bulletType": "Explosion",
+			"club": "Endanbou",
+			"name": "纱绫",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"鼠鼠"
+			]
+		},
+		{
+			"id": 20003,
+			"bulletType": "Explosion",
+			"club": "Justice",
+			"name": "真白",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"麻白"
+			]
+		},
+		{
+			"id": 20004,
+			"bulletType": "Mystic",
+			"club": "Justice",
+			"name": "真白（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水真白",
+				"水麻白"
+			]
+		},
+		{
+			"id": 20005,
+			"bulletType": "Pierce",
+			"club": "RemedialClass",
+			"name": "日富美（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Vehicle",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水坦克"
+			]
+		},
+		{
+			"id": 20006,
+			"bulletType": "Pierce",
+			"club": "Endanbou",
+			"name": "纱绫（便服）",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"私服鼠鼠"
+			]
+		},
+		{
+			"id": 20007,
+			"bulletType": "Explosion",
+			"club": "EmptyClub",
+			"name": "初音未来",
+			"cnName": "该字段已弃用",
+			"school": "ETC",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "GL",
+			"nameAlias": []
+		},
+		{
+			"id": 20008,
+			"bulletType": "Mystic",
+			"club": "Fuuki",
+			"name": "亚子",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20009,
+			"bulletType": "Explosion",
+			"club": "RedwinterSecretary",
+			"name": "切里诺（温泉）",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Vehicle",
+			"weaponType": "HG",
+			"nameAlias": [
+				"温泉坦克"
+			]
+		},
+		{
+			"id": 20010,
+			"bulletType": "Explosion",
+			"club": "Class227",
+			"name": "和香（温泉）",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"温泉和香",
+				"温泉奶"
+			]
+		},
+		{
+			"id": 20011,
+			"bulletType": "Pierce",
+			"club": "Countermeasure",
+			"name": "芹香（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"春黑猫"
+			]
+		},
+		{
+			"id": 20012,
+			"bulletType": "Mystic",
+			"club": "Emergentology",
+			"name": "濑名",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Vehicle",
+			"weaponType": "GL",
+			"nameAlias": [
+				"救护车"
+			]
+		},
+		{
+			"id": 20013,
+			"bulletType": "Pierce",
+			"club": "Veritas",
+			"name": "千寻",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 20014,
+			"bulletType": "Pierce",
+			"club": "RabbitPlatoon",
+			"name": "咲",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"saki"
+			]
+		},
+		{
+			"id": 20015,
+			"bulletType": "Explosion",
+			"club": "Shugyobu",
+			"name": "枫",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20016,
+			"bulletType": "Mystic",
+			"club": "PandemoniumSociety",
+			"name": "伊吕波",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Vehicle",
+			"weaponType": "HG",
+			"nameAlias": [
+				"168"
+			]
+		},
+		{
+			"id": 20017,
+			"bulletType": "Explosion",
+			"club": "AriusSqud",
+			"name": "日和",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": []
+		},
+		{
+			"id": 20018,
+			"bulletType": "Pierce",
+			"club": "RabbitPlatoon",
+			"name": "萌绘",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"moe"
+			]
+		},
+		{
+			"id": 20019,
+			"bulletType": "Mystic",
+			"club": "CleanNClearing",
+			"name": "茜（邦妮）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"白兔"
+			]
+		},
+		{
+			"id": 20020,
+			"bulletType": "Pierce",
+			"club": "SPTF",
+			"name": "日鞠",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"轮椅"
+			]
+		},
+		{
+			"id": 20021,
+			"bulletType": "Mystic",
+			"club": "KnightsHospitaller",
+			"name": "花江（圣诞）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"圣诞大护士"
+			]
+		},
+		{
+			"id": 20022,
+			"bulletType": "Pierce",
+			"club": "FoodService",
+			"name": "风香（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"春锅"
+			]
+		},
+		{
+			"id": 20023,
+			"bulletType": "Pierce",
+			"club": "PublicPeaceBureau",
+			"name": "康娜",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"局长"
+			]
+		},
+		{
+			"id": 20024,
+			"bulletType": "Explosion",
+			"club": "TeaParty",
+			"name": "渚",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20025,
+			"bulletType": "Explosion",
+			"club": "Kohshinjo68",
+			"name": "春香（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": [
+				"春遥香",
+				"春春香"
+			]
+		},
+		{
+			"id": 20026,
+			"bulletType": "Explosion",
+			"club": "LaborParty",
+			"name": "实梨",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"工头"
+			]
+		},
+		{
+			"id": 20027,
+			"bulletType": "Mystic",
+			"club": "Countermeasure",
+			"name": "白子（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水白子",
+				"泳装白子"
+			]
+		},
+		{
+			"id": 20028,
+			"bulletType": "Explosion",
+			"club": "SisterHood",
+			"name": "日向（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水日向",
+				"泳装日向"
+			]
+		},
+		{
+			"id": 20029,
+			"bulletType": "Mystic",
+			"club": "Shugyobu",
+			"name": "三森（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水三森",
+				"泳装三森"
+			]
+		},
+		{
+			"id": 20030,
+			"bulletType": "Sonic",
+			"club": "GourmetClub",
+			"name": "晴奈（体操服）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"体奈"
+			]
+		},
+		{
+			"id": 20031,
+			"bulletType": "Pierce",
+			"club": "Class227",
+			"name": "时雨（温泉）",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "GL",
+			"nameAlias": [
+				"温泉时雨"
+			]
+		},
+		{
+			"id": 20032,
+			"bulletType": "Mystic",
+			"club": "SPTF",
+			"name": "艾米（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": [
+				"水艾米"
+			]
+		},
+		{
+			"id": 20033,
+			"bulletType": "Pierce",
+			"club": "PandemoniumSociety",
+			"name": "真琴",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"猴王"
+			]
+		},
+		{
+			"id": 20034,
+			"bulletType": "Mystic",
+			"club": "GourmetClub",
+			"name": "明里（新年）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Vehicle",
+			"weaponType": "AR",
+			"nameAlias": [
+				"春明里",
+				"牛车"
+			]
+		},
+		{
+			"id": 20035,
+			"bulletType": "Pierce",
+			"club": "Shugyobu",
+			"name": "椿（导游）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"导游狗盾"
+			]
+		},
+		{
+			"id": 20036,
+			"bulletType": "Mystic",
+			"club": "Countermeasure",
+			"name": "芹香（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水黑猫"
+			]
+		},
+		{
+			"id": 20037,
+			"bulletType": "Explosion",
+			"club": "anzenkyoku",
+			"name": "吹雪（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水摆烂",
+				"水吹雪"
+			]
+		},
+		{
+			"id": 20038,
+			"bulletType": "Mystic",
+			"club": "RedwinterSecretary",
+			"name": "巴（旗袍）",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": [
+				"旗袍巴"
+			]
+		},
+		{
+			"id": 20039,
+			"bulletType": "Sonic",
+			"club": "Genryumon",
+			"name": "妃咲",
+			"cnName": "该字段已弃用",
+			"school": "Shanhaijing",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SMG",
+			"nameAlias": []
+		},
+		{
+			"id": 20040,
+			"bulletType": "Explosion",
+			"club": "PandemoniumSociety",
+			"name": "皋月",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20041,
+			"bulletType": "Mystic",
+			"club": "TheSeminar",
+			"name": "莉音",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"立音"
+			]
+		},
+		{
+			"id": 20042,
+			"bulletType": "Explosion",
+			"club": "Veritas",
+			"name": "真纪（露营）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"露营真纪"
+			]
+		},
+		{
+			"id": 20043,
+			"bulletType": "Explosion",
+			"club": "GourmetClub",
+			"name": "泉（正月）",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "MG",
+			"nameAlias": [
+				"正月汉堡"
+			]
+		},
+		{
+			"id": 20044,
+			"bulletType": "Pierce",
+			"club": "TrainingClub",
+			"name": "堇（打工）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": [
+				"打工堇",
+				"打工运动妹"
+			]
+		},
+		{
+			"id": 20045,
+			"bulletType": "Explosion",
+			"club": "MatsuriOffice",
+			"name": "菲娜（导游）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "MG",
+			"nameAlias": [
+				"导游菲娜"
+			]
+		},
+		{
+			"id": 20046,
+			"bulletType": "Sonic",
+			"club": "Onmyobu",
+			"name": "尼娅",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20047,
+			"bulletType": "Sonic",
+			"club": "Hyakkayouran",
+			"name": "桔梗（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水桔梗"
+			]
+		},
+		{
+			"id": 20048,
+			"bulletType": "Sonic",
+			"club": "TeaParty",
+			"name": "渚（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水渚"
+			]
+		},
+		{
+			"id": 20049,
+			"bulletType": "Explosion",
+			"club": "AriusSqud",
+			"name": "美咲（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "RL",
+			"nameAlias": []
+		},
+		{
+			"id": 20050,
+			"bulletType": "Mystic",
+			"club": "FreeTradeCartel",
+			"name": "律",
+			"cnName": "该字段已弃用",
+			"school": "WildHunt",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "SMG",
+			"nameAlias": []
+		},
+		{
+			"id": 20051,
+			"bulletType": "Sonic",
+			"club": "TrinityVigilance",
+			"name": "玲纱（魔法）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 20052,
+			"bulletType": "Explosion",
+			"club": "PublishingDepartment",
+			"name": "八云",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20053,
+			"bulletType": "Explosion",
+			"club": "NinpoKenkyubu",
+			"name": "满（礼服）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Healer",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 20054,
+			"bulletType": "Pierce",
+			"club": "SPTF",
+			"name": "日鞠（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Vehicle",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 20055,
+			"bulletType": "Mystic",
+			"club": "GameDev",
+			"name": "柚子（武装）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "GL",
+			"nameAlias": []
+		},
+		{
+			"id": 20056,
+			"bulletType": "Mystic",
+			"club": "TheSeminar",
+			"name": "小雪（睡衣）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "Supporter",
+			"weaponType": "MG",
+			"nameAlias": []
+		},
+		{
+			"id": 20057,
+			"bulletType": "Explosion",
+			"club": "CleanNClearing",
+			"name": "茜（制服）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 3,
+			"tacticRole": "DamageDealer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 23000,
+			"bulletType": "Explosion",
+			"club": "HoukagoDessert",
+			"name": "爱理",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"冰淇淋"
+			]
+		},
+		{
+			"id": 23001,
+			"bulletType": "Explosion",
+			"club": "FoodService",
+			"name": "风香",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Healer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"煮饭婆"
+			]
+		},
+		{
+			"id": 23002,
+			"bulletType": "Explosion",
+			"club": "KnightsHospitaller",
+			"name": "花江",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Healer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"大护士"
+			]
+		},
+		{
+			"id": 23003,
+			"bulletType": "Explosion",
+			"club": "Veritas",
+			"name": "晴",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"小钩八",
+				"小勾八"
+			]
+		},
+		{
+			"id": 23004,
+			"bulletType": "Pierce",
+			"club": "Engineer",
+			"name": "歌原",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"炮台"
+			]
+		},
+		{
+			"id": 23005,
+			"bulletType": "Pierce",
+			"club": "Countermeasure",
+			"name": "绫音",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Healer",
+			"weaponType": "HG",
+			"nameAlias": [
+				"眼睛妹",
+				"直升机"
+			]
+		},
+		{
+			"id": 23006,
+			"bulletType": "Mystic",
+			"club": "MatsuriOffice",
+			"name": "静子",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": [
+				"xiuneko",
+				"老板娘"
+			]
+		},
+		{
+			"id": 23007,
+			"bulletType": "Pierce",
+			"club": "RemedialClass",
+			"name": "花子",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Healer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 23008,
+			"bulletType": "Mystic",
+			"club": "SisterHood",
+			"name": "玛丽",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 2,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 26000,
+			"bulletType": "Pierce",
+			"club": "Fuuki",
+			"name": "千夏",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Healer",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 26001,
+			"bulletType": "Explosion",
+			"club": "Veritas",
+			"name": "小玉",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": []
+		},
+		{
+			"id": 26002,
+			"bulletType": "Explosion",
+			"club": "FoodService",
+			"name": "朱莉",
+			"cnName": "该字段已弃用",
+			"school": "Gehenna",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": []
+		},
+		{
+			"id": 26003,
+			"bulletType": "Mystic",
+			"club": "KnightsHospitaller",
+			"name": "芹娜",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Healer",
+			"weaponType": "AR",
+			"nameAlias": [
+				"小护士"
+			]
+		},
+		{
+			"id": 26004,
+			"bulletType": "Explosion",
+			"club": "BookClub",
+			"name": "志美子",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"图书妹"
+			]
+		},
+		{
+			"id": 26005,
+			"bulletType": "Pierce",
+			"club": "HoukagoDessert",
+			"name": "好美",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "AR",
+			"nameAlias": []
+		},
+		{
+			"id": 26006,
+			"bulletType": "Explosion",
+			"club": "Class227",
+			"name": "和香",
+			"cnName": "该字段已弃用",
+			"school": "RedWinter",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "SMG",
+			"nameAlias": []
+		},
+		{
+			"id": 26007,
+			"bulletType": "Pierce",
+			"club": "Countermeasure",
+			"name": "绫音（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Abydos",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Vehicle",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水飞机"
+			]
+		},
+		{
+			"id": 26008,
+			"bulletType": "Mystic",
+			"club": "MatsuriOffice",
+			"name": "静子（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Hyakkiyako",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "SG",
+			"nameAlias": [
+				"水静子",
+				"水老板娘"
+			]
+		},
+		{
+			"id": 26009,
+			"bulletType": "Explosion",
+			"club": "GameDev",
+			"name": "柚子（女仆）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "GL",
+			"nameAlias": [
+				"箱柚"
+			]
+		},
+		{
+			"id": 26010,
+			"bulletType": "Explosion",
+			"club": "RabbitPlatoon",
+			"name": "美游（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "SRT",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"水美游"
+			]
+		},
+		{
+			"id": 26011,
+			"bulletType": "Pierce",
+			"club": "EmptyClub",
+			"name": "佐天泪子",
+			"cnName": "该字段已弃用",
+			"school": "Sakugawa",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"泪爷"
+			]
+		},
+		{
+			"id": 26012,
+			"bulletType": "Mystic",
+			"club": "anzenkyoku",
+			"name": "桐乃（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Valkyrie",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "HG",
+			"nameAlias": [
+				"水桐乃"
+			]
+		},
+		{
+			"id": 26013,
+			"bulletType": "Sonic",
+			"club": "AriusSqud",
+			"name": "亚津子（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Arius",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Healer",
+			"weaponType": "SMG",
+			"nameAlias": [
+				"水公主"
+			]
+		},
+		{
+			"id": 26014,
+			"bulletType": "Explosion",
+			"club": "CleanNClearing",
+			"name": "花凛（制服）",
+			"cnName": "该字段已弃用",
+			"school": "Millennium",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "DamageDealer",
+			"weaponType": "SR",
+			"nameAlias": [
+				"制服花凛",
+				"制服黑皮"
+			]
+		},
+		{
+			"id": 26015,
+			"bulletType": "Sonic",
+			"club": "Justice",
+			"name": "一花（泳装）",
+			"cnName": "该字段已弃用",
+			"school": "Trinity",
+			"squadType": "Support",
+			"starGrade": 1,
+			"tacticRole": "Supporter",
+			"weaponType": "AR",
+			"nameAlias": [
+				"水一花"
+			]
+		}
+	],
+	"flowMillisecond": 110,
+	"message": "success",
+	"traceId": "69d86a7d498a13f724fd937e239d2c4a-24fd937e239d2c4a"
+}

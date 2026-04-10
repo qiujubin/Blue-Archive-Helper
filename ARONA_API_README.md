@@ -768,6 +768,37 @@
 | passiveSkillLevel | - | integer | 否 | 技能2等级，大于等于 |
 | extraPassiveSkillLevel | - | integer | 否 | 技能3等级，大于等于 |
 
+**响应参数**:
+
+| 参数名 | 类型 | 说明 |
+|--------|------|------|
+| page | integer | 页 |
+| size | integer | 单页显示数据量 |
+| totalPages | integer | 总页数 |
+| totalData | integer | 总数据量 |
+| records | array | 记录数组 |
+| records.key | string | 唯一id |
+| records.special | integer | 特殊标记，0默认 |
+| records.server | integer | 服务器信息 |
+| records.friendCode | string | 好友码 |
+| records.friendCount | integer | 好友数量 |
+| records.nickname | string | 用户名 |
+| records.level | integer | 用户等级 |
+| records.maxFavorRank | integer | 最高好感度 |
+| records.assistInfoList | array | 助战信息列表 |
+| records.assistInfoList[].uniqueId | integer | 学生id |
+| records.assistInfoList[].starGrade | integer | 学生星级 |
+| records.assistInfoList[].weaponStarGrade | integer | 专武星级 |
+| records.assistInfoList[].weaponLevel | integer | 专武等级 |
+| records.assistInfoList[].level | integer | 学生等级 |
+| records.assistInfoList[].favorRank | integer | 学生好感度 |
+| records.assistInfoList[].publicSkillLevel | integer | 技能1等级 |
+| records.assistInfoList[].exSkillLevel | integer | 大招等级 |
+| records.assistInfoList[].passiveSkillLevel | integer | 技能2等级 |
+| records.assistInfoList[].extraPassiveSkillLevel | integer | 技能3等级 |
+| records.assistInfoList[].potentialStats | object | 潜力属性（键为"1","2","3"，值为对应等级） |
+| records.assistInfoList[].gearInfo.tier | integer | 装备等级 |
+
 ---
 
 ## 账号登陆

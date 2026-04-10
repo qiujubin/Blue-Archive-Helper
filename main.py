@@ -111,6 +111,22 @@ class BlueArchiveHelper(Star):
         self._activity_cache: dict[str, tuple[float, list[dict[str, Any]]]] = {}
         self._CACHE_TTL_SECONDS = 300
         self._MAX_CACHE_ENTRIES = 10
+        # 加载角色名称映射
+        self._character_name_to_id: dict[str, int] = {}
+        self._load_character_mapping()
+
+    def _load_character_mapping(self) -> None:
+        """从result.json加载角色名称到ID的映射"""
+        try:
+            import json
+            from pathlib import Path
+            result_json_path = Path(__file__).parent / "result.json"
+            if result_json_path.exists():
+                with open(result_json_path, "r", encoding="utf-8") as f:
+                    self._character_name_to_id = json.load(f)
+                logger.info(f"已加载 {len(self._character_name_to_id)} 个角色名称映射")
+        except Exception as e:
+            logger.warning(f"加载角色名称映射失败: {e}")
 
     async def initialize(self):
         if self._reminder_task is None or self._reminder_task.done():
@@ -494,6 +510,72 @@ class BlueArchiveHelper(Star):
                 await asyncio.sleep(1)
         return []
 
+    async def _fetch_assist_query(
+        self,
+        server: int = 1,
+        unique_id: int = 0,
+        sort: int = 0,
+        page: int = 1,
+        size: int = 10,
+        star_grade: int = 5,
+        skill1: int = 10,
+        skill2: int = 10,
+        skill3: int = 10,
+        ex_skill: int = 5,
+        weapon_star: int = 3,
+        level: int = 90,
+        friend: int = 49,
+    ) -> dict[str, Any]:
+        """获取助战查询数据"""
+        cache_key = f"assist_query_{server}_{unique_id}_{sort}_{page}_{size}_{star_grade}_{skill1}_{skill2}_{skill3}_{ex_skill}_{weapon_star}_{level}_{friend}"
+        now = time.time()
+        cached = self._activity_cache.get(cache_key)
+        if cached:
+            ts, data = cached
+            if now - ts <= self._CACHE_TTL_SECONDS:
+                logger.debug("使用缓存的助战查询数据")
+                return data
+        for i in range(2):
+            try:
+                async with httpx.AsyncClient(timeout=self.api_timeout_seconds) as client:
+                    resp = await client.post(
+                        f"{self.ARONA_API_BASE}/api/friends/assist_query",
+                        json={
+                            "server": server,
+                            "page": page,
+                            "size": size,
+                            "friend": friend,
+                            "assistType": 2,
+                            "sort": sort,
+                            "uniqueId": unique_id,
+                            "level": level,
+                            "starGrade": star_grade,
+                            "weaponLevel": 0,
+                            "weaponStarGrade": weapon_star,
+                            "publicSkillLevel": skill1,
+                            "exSkillLevel": ex_skill,
+                            "passiveSkillLevel": skill2,
+                            "extraPassiveSkillLevel": skill3,
+                        },
+                        headers=self.ARONA_API_HEADERS,
+                    )
+                if resp.status_code != 200:
+                    logger.warning(f"Arona助战查询接口状态码异常: {resp.status_code}")
+                    continue
+                payload = resp.json()
+                if payload.get("code") not in (0, 200):
+                    logger.warning(f"Arona助战查询接口业务状态异常: {payload}")
+                    continue
+                data = payload.get("data")
+                if isinstance(data, dict):
+                    self._activity_cache[cache_key] = (now, data)
+                    self._clean_expired_cache()
+                    return data
+            except Exception as e:
+                logger.warning(f"Arona助战查询接口请求失败({i + 1}/2): {e}")
+                await asyncio.sleep(1)
+        return {}
+
     def _split_activities(
         self,
         activities: list[dict[str, Any]],
@@ -834,6 +916,158 @@ class BlueArchiveHelper(Star):
             event.get_platform_name(),
         )
         yield event.plain_result(result_text)
+
+    @filter.command("ba助战")
+    async def ba_assist(
+        self, event: AstrMessageEvent,
+        server: str | None = None,
+        character: str | None = None,
+        star_grade: int | None = None,
+        skill1: int | None = None,
+        skill2: int | None = None,
+        skill3: int | None = None,
+        ex_skill: int | None = None,
+        weapon_star: int | None = None,
+        level: int | None = None,
+        friend: int | None = None,
+        sort: int | None = None,
+        page: int | None = None,
+    ):
+        """查询助战角色数据"""
+        if not self._is_allowed_umo(event.unified_msg_origin):
+            return
+        # 解析服务器参数
+        server_id = 1  # 默认官服
+        if server:
+            server = server.strip().lower()
+            if server in {"b服", "b", "bilibili"}:
+                server_id = 2
+            elif server in {"官服", "国服", "国", "cn"}:
+                server_id = 1
+            elif server in {"日服", "日", "jp", "japan"}:
+                server_id = 3
+            else:
+                try:
+                    server_id = int(server)
+                except ValueError:
+                    pass
+        # 解析角色名称
+        unique_id = 0
+        if character:
+            character_stripped = character.strip()
+            if character_stripped:
+                unique_id = self._character_name_to_id.get(character_stripped, 0)
+                if unique_id == 0:
+                    # 尝试模糊匹配
+                    for name, uid in self._character_name_to_id.items():
+                        if character_stripped in name:
+                            unique_id = uid
+                            break
+        # 未指定角色时显示帮助
+        if not character or not character.strip():
+            help_text = (
+                "BA总力战助战查询 使用帮助\n"
+                "数据来源：arona.icu\n\n"
+                "命令格式：/ba助战 [服务器] [角色名] [星级] [技能1] [技能2] [技能3] [大招] [专武] [等级] [好友] [排序]\n\n"
+                "服务器（可选）：官服（默认）、B服、日服\n"
+                "角色名（必填）：学生昵称，如：星野、日奈、白子等\n\n"
+                "筛选参数（可选，默认值）：\n"
+                "  星级要求：≥5\n"
+                "  技能1等级：≥10\n"
+                "  技能2等级：≥10\n"
+                "  技能3等级：≥10\n"
+                "  大招等级：≥5\n"
+                "  专武星级：≥3\n"
+                "  学生等级：≥90\n"
+                "  好友数量：≤49\n"
+                "排序（可选，默认0）：\n"
+                "  0：默认\n"
+                "  1：好感度降序\n"
+                "  2：好感度升序\n"
+                "  3：好友数量降序\n"
+                "  4：好友数量升序\n"
+                "页（可选，默认1）：查询结果的页码\n\n"
+                "示例：\n"
+                "/ba助战 星野\n"
+                "/ba助战 B服 星野\n"
+                "/ba助战 日服 日奈\n"
+                "/ba助战 星野 5 10 10 10 5 3 90 49\n"
+                "/ba助战 星野 5 10 10 10 5 3 90 49 1\n"
+                "/ba助战 星野 5 10 10 10 5 3 90 49 1 2"
+            )
+            yield event.plain_result(help_text)
+            return
+        # 解析排序参数
+        sort_id = sort if sort is not None else 0
+        # 使用自定义参数或默认值
+        star_grade_val = star_grade if star_grade is not None else 5
+        skill1_val = skill1 if skill1 is not None else 10
+        skill2_val = skill2 if skill2 is not None else 10
+        skill3_val = skill3 if skill3 is not None else 10
+        ex_skill_val = ex_skill if ex_skill is not None else 5
+        weapon_star_val = weapon_star if weapon_star is not None else 3
+        level_val = level if level is not None else 90
+        friend_val = friend if friend is not None else 49
+        page_val = page if page is not None else 1
+        data = await self._fetch_assist_query(
+            server=server_id,
+            unique_id=unique_id,
+            sort=sort_id,
+            page=page_val,
+            size=10,
+            star_grade=star_grade_val,
+            skill1=skill1_val,
+            skill2=skill2_val,
+            skill3=skill3_val,
+            ex_skill=ex_skill_val,
+            weapon_star=weapon_star_val,
+            level=level_val,
+            friend=friend_val,
+        )
+        if not data:
+            yield event.plain_result("助战数据获取失败，请稍后重试。")
+            return
+        records = data.get("records", [])
+        if not records:
+            yield event.plain_result("未找到符合条件的助战数据。")
+            return
+        lines = ["BA总力战助战查询", "数据来源：arona.icu"]
+        lines.append(f"服务器：{'官服' if server_id == 1 else 'B服' if server_id == 2 else '日服' if server_id == 3 else f'ID:{server_id}'}")
+        if character and unique_id:
+            lines.append(f"角色：{character}")
+        lines.append(f"筛选：星≥{star_grade_val} 级≥{level_val} 专武≥{weapon_star_val}星 技能1/2/3≥{skill1_val}/{skill2_val}/{skill3_val} 大招≥{ex_skill_val} 好友≤{friend_val}")
+        lines.append("")
+        # 显示助战数据
+        for item in records:
+            nickname = item.get("nickname", "-") or "-"
+            level = item.get("level", "-") or "-"
+            friend_code = item.get("friendCode", "-") or "-"
+            friend_count = item.get("friendCount", 0) or 0
+            max_favor_rank = item.get("maxFavorRank", 0) or 0
+            # 查找符合查询条件的角色
+            assist_infos = item.get("assistInfoList", []) or []
+            for assist in assist_infos:
+                assist_unique_id = assist.get("uniqueId", 0)
+                if unique_id == 0 or assist_unique_id == unique_id:
+                    star_grade = assist.get("starGrade", "-") or "-"
+                    weapon_star = assist.get("weaponStarGrade", 0) or 0
+                    weapon_level = assist.get("weaponLevel", 0) or 0
+                    potential_stats = assist.get("potentialStats", {}) or {}
+                    p1 = potential_stats.get("1", 0) or 0
+                    p2 = potential_stats.get("2", 0) or 0
+                    p3 = potential_stats.get("3", 0) or 0
+                    favor_rank = assist.get("favorRank", 0) or 0
+                    lines.append(
+                        f"- 好友码: {friend_code} | 好友数: {friend_count}\n"
+                        f"  {nickname}(L{level}) | 好感: {favor_rank}/{max_favor_rank} | 星:{star_grade} | 专武:{weapon_star}星(等级{weapon_level}) | 潜力:{p1}/{p2}/{p3}"
+                    )
+        result_text = "\n".join(lines)
+        result_text = await self._polish_text(
+            result_text,
+            event.unified_msg_origin,
+            event.get_platform_name(),
+        )
+        await self.ctx.send_message(event.unified_msg_origin, MessageChain().message(result_text))
 
     @filter.command("ba总力战档线")
     async def ba_rank_list_top(
