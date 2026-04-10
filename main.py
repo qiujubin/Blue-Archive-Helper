@@ -14,6 +14,15 @@ from astrbot.api.star import Context, Star, register
 )
 class BlueArchiveHelper(Star):
     SCHEDULE_CHECK_SECONDS = 30
+    # Arona API 配置
+    ARONA_API_BASE = "https://api.arona.icu"
+    ARONA_API_KEY = "ba-token 1774689169:PIZQxeVaMLNF6niUQv9UjTAgTbtyAJUAFf8JzBqMQIu"
+    ARONA_API_HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.6045.160 Safari/537.36",
+        "Referer": "https://arona.icu",
+        "Content-Type": "application/json",
+        "Authorization": ARONA_API_KEY,
+    }
     ACTIVITY_KIND_LABELS = {
         14: "活动",
         15: "总力战大决战",
@@ -411,6 +420,80 @@ class BlueArchiveHelper(Star):
                 await asyncio.sleep(1)
         return []
 
+    async def _fetch_last_rank_by_difficulty(
+        self, server: int = 1, season: str = "latest"
+    ) -> list[dict[str, Any]]:
+        """获取各难度最低排名数据"""
+        cache_key = f"last_rank_{server}_{season}"
+        now = time.time()
+        cached = self._activity_cache.get(cache_key)
+        if cached:
+            ts, data = cached
+            if now - ts <= self._CACHE_TTL_SECONDS:
+                logger.debug("使用缓存的大决战各难度最低排名数据")
+                return data
+        for i in range(2):
+            try:
+                async with httpx.AsyncClient(timeout=self.api_timeout_seconds) as client:
+                    resp = await client.post(
+                        f"{self.ARONA_API_BASE}/api/v2/rank/list_by_last_rank",
+                        json={"server": server, "season": season},
+                        headers=self.ARONA_API_HEADERS,
+                    )
+                if resp.status_code != 200:
+                    logger.warning(f"Arona各难度最低排名接口状态码异常: {resp.status_code}")
+                    continue
+                payload = resp.json()
+                if payload.get("code") not in (0, 200):
+                    logger.warning(f"Arona各难度最低排名接口业务状态异常: {payload}")
+                    continue
+                data = payload.get("data")
+                if isinstance(data, list):
+                    self._activity_cache[cache_key] = (now, data)
+                    self._clean_expired_cache()
+                    return data
+            except Exception as e:
+                logger.warning(f"Arona各难度最低排名接口请求失败({i + 1}/2): {e}")
+                await asyncio.sleep(1)
+        return []
+
+    async def _fetch_rank_list_top(
+        self, server: int = 1, season: str = "latest"
+    ) -> list[dict[str, Any]]:
+        """获取各档线分数数据"""
+        cache_key = f"rank_list_top_{server}_{season}"
+        now = time.time()
+        cached = self._activity_cache.get(cache_key)
+        if cached:
+            ts, data = cached
+            if now - ts <= self._CACHE_TTL_SECONDS:
+                logger.debug("使用缓存的总力战档线数据")
+                return data
+        for i in range(2):
+            try:
+                async with httpx.AsyncClient(timeout=self.api_timeout_seconds) as client:
+                    resp = await client.post(
+                        f"{self.ARONA_API_BASE}/api/v2/rank/list_top",
+                        json={"server": server, "season": season},
+                        headers=self.ARONA_API_HEADERS,
+                    )
+                if resp.status_code != 200:
+                    logger.warning(f"Arona总力战档线接口状态码异常: {resp.status_code}")
+                    continue
+                payload = resp.json()
+                if payload.get("code") not in (0, 200):
+                    logger.warning(f"Arona总力战档线接口业务状态异常: {payload}")
+                    continue
+                data = payload.get("data")
+                if isinstance(data, list):
+                    self._activity_cache[cache_key] = (now, data)
+                    self._clean_expired_cache()
+                    return data
+            except Exception as e:
+                logger.warning(f"Arona总力战档线接口请求失败({i + 1}/2): {e}")
+                await asyncio.sleep(1)
+        return []
+
     def _split_activities(
         self,
         activities: list[dict[str, Any]],
@@ -694,3 +777,104 @@ class BlueArchiveHelper(Star):
             event.get_platform_name(),
         )
         yield event.plain_result(status_text)
+
+    @filter.command("ba总力战各难度最低排名")
+    async def ba_last_rank_by_difficulty(
+        self, event: AstrMessageEvent, server: str | None = None
+    ):
+        """查询最新一期大决战各难度最低排名"""
+        if not self._is_allowed_umo(event.unified_msg_origin):
+            return
+        # 解析服务器参数
+        server_id = 1  # 默认国服
+        if server:
+            server = server.strip().lower()
+            if server in {"b服", "b", "bilibili"}:
+                server_id = 2
+            elif server in {"官服", "国服", "国", "cn"}:
+                server_id = 1
+            elif server in {"日服", "日", "jp", "japan"}:
+                server_id = 3
+            else:
+                try:
+                    server_id = int(server)
+                except ValueError:
+                    pass
+        data = await self._fetch_last_rank_by_difficulty(server=server_id, season="latest")
+        if not data:
+            yield event.plain_result("大决战排名数据获取失败，请稍后重试。")
+            return
+        # 按难度分组显示
+        lines = ["BA总力战各难度最低排名", "数据来源：arona.icu"]
+        lines.append(f"服务器：{'官服' if server_id == 1 else 'B服' if server_id == 2 else '日服' if server_id == 3 else f'ID:{server_id}'}")
+        lines.append("")
+        # 按难度分组，每个难度只显示最低的下边界
+        grouped: dict[str, dict] = {}
+        for item in data:
+            label_info = item.get("labelInfo") or []
+            # 只处理下边界 (dataType = 0)
+            lower_bounds = [li for li in label_info if li.get("dataType") == 0]
+            if not lower_bounds:
+                continue
+            hard = item.get("hard", "-")
+            rank = item.get("rank", 0) or 0
+            point = item.get("bestRankingPoint", 0) or 0
+            battle_time = item.get("battleTime", "-")
+            # 同一难度只保留排名最低（数字最小）的
+            if hard not in grouped or rank < grouped[hard].get("rank", 0):
+                grouped[hard] = {"rank": rank, "point": point, "battle_time": battle_time}
+        # 按难度顺序排序显示
+        for hard in sorted(grouped.keys()):
+            info = grouped[hard]
+            lines.append(f"- {hard} | 排名: {info['rank']} | 分数: {info['point']} | 耗时: {info['battle_time']}")
+        result_text = "\n".join(lines)
+        result_text = await self._polish_text(
+            result_text,
+            event.unified_msg_origin,
+            event.get_platform_name(),
+        )
+        yield event.plain_result(result_text)
+
+    @filter.command("ba总力战档线")
+    async def ba_rank_list_top(
+        self, event: AstrMessageEvent, server: str | None = None
+    ):
+        """查询最新一期总力战各档线分数"""
+        if not self._is_allowed_umo(event.unified_msg_origin):
+            return
+        # 解析服务器参数
+        server_id = 1  # 默认国服
+        if server:
+            server = server.strip().lower()
+            if server in {"b服", "b", "bilibili"}:
+                server_id = 2
+            elif server in {"官服", "国服", "国", "cn"}:
+                server_id = 1
+            elif server in {"日服", "日", "jp", "japan"}:
+                server_id = 3
+            else:
+                try:
+                    server_id = int(server)
+                except ValueError:
+                    pass
+        data = await self._fetch_rank_list_top(server=server_id, season="latest")
+        if not data:
+            yield event.plain_result("总力战档线数据获取失败，请稍后重试。")
+            return
+        lines = ["BA总力战各档线分数", "数据来源：arona.icu"]
+        lines.append(f"服务器：{'官服' if server_id == 1 else 'B服' if server_id == 2 else '日服' if server_id == 3 else f'ID:{server_id}'}")
+        lines.append("")
+        # 按排名显示档线
+        for item in data:
+            hard = item.get("hard", "-")
+            rank = item.get("rank", "-")
+            point = item.get("bestRankingPoint", "-")
+            battle_time = item.get("battleTime", "-")
+            lines.append(f"- {hard} | 排名: {rank} | 分数: {point} | 耗时: {battle_time}")
+        result_text = "\n".join(lines)
+        result_text = await self._polish_text(
+            result_text,
+            event.unified_msg_origin,
+            event.get_platform_name(),
+        )
+        yield event.plain_result(result_text)
